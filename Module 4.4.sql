@@ -21,3 +21,26 @@ FROM employees
 WHERE age > 25
 GROUP BY department_id
 HAVING AVG(salary) > 50000;
+
+
+-- Example 1
+ -- Count of Employees by Department Where There Are More Than 2 Employees
+SELECT department_id, COUNT(*) AS employee_count
+FROM employees
+GROUP BY department_id
+HAVING COUNT(*) > 2;
+
+-- Example 2: Total Salary by Department for Departments with a Total Salary Exceeding $100,000
+SELECT department_id, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department_id
+HAVING SUM(salary) > 100000;
+
+-- Example 3 :-Average Age of Employees by Department for Departments Where the Average Age is Over 30
+SELECT department_id, AVG(age) AS average_age
+FROM employees
+GROUP BY department_id
+HAVING AVG(age) > 30;
+
+
+
