@@ -24,3 +24,16 @@ ORDER BY student_name;
 -- Sort students by their grades in ascending order, then by age in descending order
 SELECT * FROM students
 ORDER BY grade, age DESC;
+
+-- Sort students by their ages in descending order
+SELECT * FROM students
+ORDER BY age DESC;
+
+-- Sort students by their grades in ascending order, then by names in ascending order
+SELECT * FROM students
+ORDER BY grade, student_name;
+
+-- Sort students by their grades in descending order, then by ages in ascending order
+SELECT * FROM students
+ORDER BY grade DESC, age;
+
